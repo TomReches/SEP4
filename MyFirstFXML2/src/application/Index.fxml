@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutX="-2.0" layoutY="2.0" prefHeight="94.0" prefWidth="1024.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="672.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Home" />
+          <Menu mnemonicParsing="false" text="Solar Panels">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Photovoltaic Panel" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Thermal Panel" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Warnings" />
+        </menus>
+         <padding>
+            <Insets left="380.0" top="30.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+      <AnchorPane layoutY="105.0" prefHeight="650.0" prefWidth="510.0" style="-fx-background-color: grey;">
+         <children>
+            <Text layoutX="42.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ejby Maskinfabrik" wrappingWidth="396.6708984375">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="50.0" />
+               </font>
+            </Text>
+            <Text layoutX="183.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="News" wrappingWidth="144.0166015625">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="47.0" />
+               </font>
+            </Text>
+            <AreaChart layoutY="277.0" prefHeight="359.0" prefWidth="480.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="501.0" layoutY="105.0" prefHeight="650.0" prefWidth="493.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Text layoutX="255.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Pane prefHeight="116.0" prefWidth="511.0">
+               <children>
+                  <Text layoutX="32.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curent Date">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="243.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature outside">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="29.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="325.0" prefHeight="225.0" prefWidth="513.0">
+               <children>
+                  <Text layoutX="128.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total energy generation ">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="32.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yesterday">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="31.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tomorrow prediction">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="409.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xx">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="409.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xx">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="409.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xx">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="127.0" prefHeight="166.0" prefWidth="513.0">
+               <children>
+                  <Text layoutX="29.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total energy generation in 2020">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                     </font>
+                  </Text>
+                  <ProgressIndicator layoutX="398.0" layoutY="23.0" progress="0.41" />
+                  <Text layoutX="29.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total energy savings in 2020">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="22.0" />
+                     </font>
+                  </Text>
+                  <ProgressIndicator layoutX="398.0" layoutY="111.0" progress="0.41" />
+               </children>
+            </Pane>
+            <Text layoutX="53.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="423.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xx">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Separator layoutX="9.0" layoutY="305.0" prefHeight="20.0" prefWidth="510.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

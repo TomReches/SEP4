@@ -24,7 +24,7 @@ public class Main extends Application {
 		try {
 			window.setTitle("Test");
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("First2.fxml"));
+			loader.setLocation(getClass().getResource("Index.fxml"));
 			Scene scene= new Scene(loader.load());
 
 			
