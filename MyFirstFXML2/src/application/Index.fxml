@@ -40,9 +40,9 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </MenuBar>
-      <AnchorPane layoutY="105.0" prefHeight="650.0" prefWidth="510.0" style="-fx-background-color: grey;">
+      <AnchorPane layoutY="106.0" prefHeight="650.0" prefWidth="510.0" style="-fx-background-color: grey;">
          <children>
-            <Text layoutX="42.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ejby Maskinfabrik" wrappingWidth="396.6708984375">
+            <Text fontSmoothingType="LCD" layoutX="42.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ejby Maskinfabrik" wrappingWidth="396.6708984375">
                <font>
                   <Font name="Microsoft Sans Serif" size="50.0" />
                </font>
