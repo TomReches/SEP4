@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -17,14 +19,15 @@ import javafx.fxml.FXML;
 
 public class Main extends Application {
 	
-	@FXML private TextField text;
-	@FXML private Button clickMe;
+	@FXML private TextField username;
+	@FXML private TextField password;
 	@Override
+	
 	public void start(Stage window) {
 		try {
 			window.setTitle("Test");
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("Index.fxml"));
+			loader.setLocation(getClass().getResource("Login.fxml"));
 			Scene scene= new Scene(loader.load());
 
 			
@@ -48,9 +51,9 @@ public class Main extends Application {
 		}
 	}
 	//https://www.youtube.com/watch?v=XCgcQTQCfJQ
-	public void changeScreen(ActionEvent e) throws IOException
+	public void changeScreenToIndex(ActionEvent e) throws IOException
 	{
-		Parent newViewParent = FXMLLoader.load(getClass().getResource("NewTab.fxml"));
+		Parent newViewParent = FXMLLoader.load(getClass().getResource("Index.fxml"));
 		Scene changeScreen= new Scene(newViewParent);
 		Stage window = (Stage) ((Node)e.getSource()).getScene().getWindow();
 		window.setScene(changeScreen);
@@ -65,5 +68,23 @@ public class Main extends Application {
 		window.setScene(changeScreen);
 		window.show();
 }
+	
+	public void login(ActionEvent e) throws IOException
+	{
+		if(username.getText().equals("sep4") && password.getText().equals("password")) {
+			Parent newViewParent = FXMLLoader.load(getClass().getResource("Index.fxml"));
+			Scene changeScreen= new Scene(newViewParent);
+			Stage window = (Stage) ((Node)e.getSource()).getScene().getWindow();
+			window.setScene(changeScreen);
+			window.show();
+		}
+		
+		else {
+			Alert alert = new Alert(AlertType.ERROR,"Wrong username or password");
+			alert.showAndWait();
+
+		}
+				
+	}
 	
 }

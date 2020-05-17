@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ExpansionPanel.CollapsedPanel?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuButton?>
@@ -13,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
    <children>
       <Text layoutX="342.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnings">
          <font>
@@ -39,12 +38,11 @@
             </Text>
          </children>
       </Pane>
-      <ExpansionPanel.CollapsedPanel layoutX="62.0" layoutY="25.0" prefWidth="252" />
       <Pane prefHeight="97.0" prefWidth="1024.0">
          <children>
             <Pane prefHeight="97.0" prefWidth="1024.0" stylesheets="@application.css">
                <children>
-                  <MenuButton fx:id="measurements" alignment="CENTER" layoutX="419.0" layoutY="27.0" mnemonicParsing="false" styleClass="menubar" stylesheets="@application.css" text="Measurements">
+                  <MenuButton fx:id="measurements" alignment="CENTER" layoutX="396.0" layoutY="28.0" mnemonicParsing="false" styleClass="menubar" stylesheets="@application.css" text="Measurements">
                     <items>
                       <MenuItem mnemonicParsing="false" text="Photovoltaic panel" />
                       <MenuItem mnemonicParsing="false" text="Thermal panel" />
@@ -63,7 +61,7 @@
                         </ImageView>
                      </graphic>
                   </MenuButton>
-                  <Button fx:id="home" layoutX="203.0" layoutY="26.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="186.0" styleClass="menubar" stylesheets="@application.css" text="Home">
+                  <Button fx:id="home" layoutX="188.0" layoutY="28.0" mnemonicParsing="false" onAction="#changeScreenToIndex" prefHeight="45.0" prefWidth="186.0" styleClass="menubar" stylesheets="@application.css" text="Home">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -78,7 +76,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="warnings" layoutX="659.0" layoutY="27.0" mnemonicParsing="false" styleClass="menubar" stylesheets="@application.css" text="Warnings">
+                  <Button fx:id="warnings" layoutX="649.0" layoutY="26.0" mnemonicParsing="false" styleClass="menubar" stylesheets="@application.css" text="Warnings">
                      <font>
                         <Font size="20.0" />
                      </font>
